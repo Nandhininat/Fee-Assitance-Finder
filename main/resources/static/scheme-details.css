@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f8fc;
+    color: #172033;
+}
+
+.navbar {
+    background: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+
+.brand {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #475467;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+.back {
+    color: #2563eb;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.details-card {
+    background: white;
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.07);
+}
+
+.title-section {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.big-icon {
+    width: 80px;
+    height: 80px;
+    background: #eef4ff;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+}
+
+.badge {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.title-section h1 {
+    margin: 12px 0 8px;
+    font-size: 32px;
+}
+
+.title-section p {
+    color: #667085;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.detail {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.detail span {
+    display: block;
+    color: #667085;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.detail strong {
+    font-size: 15px;
+}
+
+.content-section {
+    margin-top: 30px;
+}
+
+.content-section h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.content-section p {
+    color: #475467;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.actions button,
+.actions a {
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bookmark {
+    border: 1px solid #2563eb;
+    background: white;
+    color: #2563eb;
+}
+
+.apply {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 60px;
+}
+
+.error {
+    color: #dc2626;
+}
+
+@media(max-width:700px) {
+
+    nav {
+        display: none;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title-section {
+        align-items: flex-start;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .details-card {
+        padding: 25px;
+    }
+}

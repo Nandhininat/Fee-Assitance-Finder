@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f8fc;
+    color: #172033;
+}
+
+.navbar {
+    background: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+
+.brand {
+    color: #2563eb;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar button {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 35px auto;
+}
+
+.hero {
+    background: linear-gradient(135deg,#1d4ed8,#4f46e5);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+}
+
+.hero span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 15px;
+    opacity: .9;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.form-card,
+.list-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.form-card h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 13px 0 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 75px;
+    resize: vertical;
+}
+
+form button,
+.list-header button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 18px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+form .cancel {
+    background: #f2f4f7;
+    color: #344054;
+    margin-top: 8px;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-header button {
+    width: auto;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.admin-scheme {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
+
+.admin-scheme h3 {
+    margin-bottom: 8px;
+}
+
+.admin-scheme p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.admin-actions button {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.edit {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.delete {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.success {
+    color: #15803d;
+    margin-top: 15px;
+}
+
+.error {
+    color: #dc2626;
+    margin-top: 15px;
+}
+
+@media(max-width:900px) {
+
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:600px) {
+
+    .hero {
+        padding: 30px;
+        font-size: 30px;
+    }
+}

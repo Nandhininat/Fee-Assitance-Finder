@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ScholarFind - Notifications</title>
+
+    <link rel="stylesheet"
+          href="notification.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     NAVIGATION BAR
+======================================== -->
+
+<header class="navbar">
+
+    <div class="brand">
+        🎓 ScholarFind
+    </div>
+
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="schemes.html">
+            Scholarships
+        </a>
+
+        <a href="bookmarks.html">
+            Bookmarks
+        </a>
+
+        <a href="notification.html"
+           class="active">
+            Notifications
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ========================================
+     MAIN CONTENT
+======================================== -->
+
+<main class="container">
+
+
+    <!-- PAGE HEADING -->
+
+    <div class="heading">
+
+        <span>
+            STAY UPDATED
+        </span>
+
+
+        <h1>
+
+            Notifications 🔔
+
+            <span
+                id="unreadCount"
+                class="unread-badge"
+                style="display: none;">
+
+                0
+
+            </span>
+
+        </h1>
+
+
+        <p>
+            Scholarship eligibility and deadline alerts.
+        </p>
+
+    </div>
+
+
+
+    <!-- ========================================
+         TOOLBAR
+    ======================================== -->
+
+    <div class="toolbar">
+
+        <button
+            type="button"
+            onclick="loadNotifications()">
+
+            All
+
+        </button>
+
+
+        <button
+            type="button"
+            onclick="loadUnread()">
+
+            Unread
+
+        </button>
+
+
+        <button
+            type="button"
+            class="delete-all"
+            onclick="deleteAll()">
+
+            Delete All
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ========================================
+         LOADING
+    ======================================== -->
+
+    <div
+        id="loading"
+        style="display: none;">
+
+        Loading notifications...
+
+    </div>
+
+
+
+    <!-- ========================================
+         NOTIFICATION CONTAINER
+    ======================================== -->
+
+    <div id="notificationContainer">
+
+    </div>
+
+
+
+    <!-- ========================================
+         EMPTY MESSAGE
+    ======================================== -->
+
+    <div
+        id="empty"
+        class="empty"
+        style="display: none;">
+
+        <div>
+            🔔
+        </div>
+
+
+        <h2>
+            No notifications
+        </h2>
+
+
+        <p>
+            You're all caught up!
+        </p>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ========================================
+     NOTIFICATION JAVASCRIPT
+======================================== -->
+
+<script src="notification.js"></script>
+
+
+</body>
+
+</html>

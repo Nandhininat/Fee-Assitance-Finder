@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>ScholarFind - Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="brand">
+        🎓 ScholarFind
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="schemes.html">Scholarships</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="notification.html">Notifications</a>
+        <a href="profile.html">Profile</a>
+        <button onclick="logout()">Logout</button>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <section class="hero">
+
+        <div>
+
+            <p class="small">WELCOME BACK</p>
+
+            <h1>
+                Hello, <span id="studentName">Student</span> 👋
+            </h1>
+
+            <p>
+                Find government scholarships matching your eligibility.
+            </p>
+
+        </div>
+
+        <div class="hero-icon">
+            🎓
+        </div>
+
+    </section>
+
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <span>🎯</span>
+            <h3 id="eligibleCount">0</h3>
+            <p>Eligible Scholarships</p>
+        </div>
+
+        <div class="stat-card">
+            <span>🔖</span>
+            <h3 id="bookmarkCount">0</h3>
+            <p>Saved Scholarships</p>
+        </div>
+
+        <div class="stat-card">
+            <span>🔔</span>
+            <h3 id="notificationCount">0</h3>
+            <p>Unread Notifications</p>
+        </div>
+
+        <div class="stat-card">
+            <span>🎓</span>
+            <h3 id="schemeCount">0</h3>
+            <p>Total Scholarships</p>
+        </div>
+
+    </section>
+
+
+    <section class="actions">
+
+        <h2>Quick Actions</h2>
+
+        <div class="action-grid">
+
+            <a href="schemes.html">
+                🔎
+                <strong>Find Scholarships</strong>
+                <span>Explore available schemes</span>
+            </a>
+
+            <a href="bookmarks.html">
+                🔖
+                <strong>My Bookmarks</strong>
+                <span>View saved scholarships</span>
+            </a>
+
+            <a href="notification.html">
+                🔔
+                <strong>Notifications</strong>
+                <span>Check latest alerts</span>
+            </a>
+
+            <a href="profile.html">
+                👤
+                <strong>My Profile</strong>
+                <span>Update your details</span>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

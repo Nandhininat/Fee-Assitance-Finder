@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>ScholarFind - Bookmarks</title>
+
+<link rel="stylesheet"
+      href="bookmarks.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="brand">
+        🎓 ScholarFind
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="schemes.html">Scholarships</a>
+        <a href="bookmarks.html"
+           class="active">
+            Bookmarks
+        </a>
+        <a href="notification.html">Notifications</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <div class="heading">
+
+        <div>
+            <span>YOUR SAVED ITEMS</span>
+            <h1>My Bookmarks 🔖</h1>
+            <p>Scholarships you saved for later.</p>
+        </div>
+
+    </div>
+
+
+    <div id="loading">
+        Loading bookmarks...
+    </div>
+
+
+    <div id="bookmarkContainer"
+         class="grid">
+    </div>
+
+
+    <div id="empty"
+         class="empty"
+         style="display:none;">
+
+        <div>🔖</div>
+
+        <h2>No bookmarks yet</h2>
+
+        <p>
+            Save scholarships from the scholarship finder.
+        </p>
+
+        <a href="schemes.html">
+            Find Scholarships
+        </a>
+
+    </div>
+
+</main>
+
+
+<script src="bookmarks.js"></script>
+
+</body>
+</html>

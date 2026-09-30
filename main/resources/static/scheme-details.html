@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>ScholarFind - Scheme Details</title>
+
+<link rel="stylesheet"
+      href="scheme-details.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="brand">
+        🎓 ScholarFind
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="schemes.html">Scholarships</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="notification.html">Notifications</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <a href="schemes.html"
+       class="back">
+        ← Back to Scholarships
+    </a>
+
+
+    <div id="loading"
+         class="loading">
+        Loading details...
+    </div>
+
+
+    <section id="details"
+             class="details-card"
+             style="display:none;">
+
+        <div class="title-section">
+
+            <div class="big-icon">
+                🎓
+            </div>
+
+            <div>
+
+                <span class="badge">
+                    Government Scholarship
+                </span>
+
+                <h1 id="schemeName"></h1>
+
+                <p id="benefits"></p>
+
+            </div>
+
+        </div>
+
+
+        <div class="details-grid">
+
+            <div class="detail">
+                <span>💰 Income Limit</span>
+                <strong id="incomeLimit"></strong>
+            </div>
+
+            <div class="detail">
+                <span>👥 Category</span>
+                <strong id="category"></strong>
+            </div>
+
+            <div class="detail">
+                <span>🎓 Course</span>
+                <strong id="course"></strong>
+            </div>
+
+            <div class="detail">
+                <span>📍 Location</span>
+                <strong id="location"></strong>
+            </div>
+
+            <div class="detail deadline">
+                <span>📅 Application Deadline</span>
+                <strong id="deadline"></strong>
+            </div>
+
+        </div>
+
+
+        <div class="content-section">
+
+            <h2>Eligibility</h2>
+
+            <p id="eligibility"></p>
+
+        </div>
+
+
+        <div class="content-section">
+
+            <h2>Required Documents</h2>
+
+            <p id="documents"></p>
+
+        </div>
+
+
+        <div class="content-section">
+
+            <h2>Application Procedure</h2>
+
+            <p id="procedure"></p>
+
+        </div>
+
+
+        <div class="actions">
+
+            <button
+                onclick="bookmarkScheme()"
+                class="bookmark">
+
+                🔖 Save Scholarship
+
+            </button>
+
+
+            <a
+                id="applyLink"
+                class="apply"
+                target="_blank"
+                rel="noopener">
+
+                Apply Now →
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <div id="error"
+         class="error"
+         style="display:none;">
+
+        Scholarship not found.
+
+    </div>
+
+</main>
+
+
+<script src="scheme-details.js"></script>
+
+</body>
+</html>

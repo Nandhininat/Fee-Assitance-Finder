@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>ScholarFind - Profile</title>
+
+<link rel="stylesheet"
+      href="profile.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="brand">
+        🎓 ScholarFind
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="schemes.html">Scholarships</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="notification.html">Notifications</a>
+        <a href="profile.html"
+           class="active">
+            Profile
+        </a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <div class="profile-header">
+
+        <div class="avatar">
+            👤
+        </div>
+
+        <div>
+            <h1>My Profile</h1>
+            <p>
+                Keep your eligibility information updated.
+            </p>
+        </div>
+
+    </div>
+
+
+    <form id="profileForm"
+          class="profile-card">
+
+        <div id="message"></div>
+
+
+        <div class="form-grid">
+
+            <div>
+                <label>Student Name</label>
+                <input id="studentname" required>
+            </div>
+
+            <div>
+                <label>Username</label>
+                <input id="username" readonly>
+            </div>
+
+            <div>
+                <label>Course / Class</label>
+                <input id="course" required>
+            </div>
+
+            <div>
+                <label>Annual Income</label>
+                <input
+                    id="income"
+                    type="number"
+                    min="0"
+                    required>
+            </div>
+
+            <div>
+                <label>Academic Details</label>
+                <input id="academicDetails" required>
+            </div>
+
+            <div>
+                <label>Category</label>
+
+                <select id="category" required>
+
+                    <option value="General">
+                        General
+                    </option>
+
+                    <option value="BC">
+                        BC
+                    </option>
+
+                    <option value="MBC">
+                        MBC
+                    </option>
+
+                    <option value="SC">
+                        SC
+                    </option>
+
+                    <option value="ST">
+                        ST
+                    </option>
+
+                    <option value="OBC">
+                        OBC
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div>
+                <label>Location</label>
+                <input id="location" required>
+            </div>
+
+        </div>
+
+
+        <button type="submit">
+            Save Profile
+        </button>
+
+    </form>
+
+</main>
+
+
+<script src="profile.js"></script>
+
+</body>
+</html>

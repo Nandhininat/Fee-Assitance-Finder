@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f8fc;
+    color: #172033;
+}
+
+.navbar {
+    background: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.brand {
+    color: #2563eb;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: #475467;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 35px auto;
+}
+
+.page-header {
+    background: linear-gradient(135deg,#2563eb,#4f46e5);
+    color: white;
+    padding: 45px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.page-header h1 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.page-header p {
+    opacity: .9;
+}
+
+.header-icon {
+    font-size: 75px;
+}
+
+.filter-box {
+    background: white;
+    margin: 25px 0;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.05);
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.search-box button {
+    padding: 0 25px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #d0d5dd;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.result-header h2 {
+    font-size: 23px;
+}
+
+.result-header span {
+    color: #667085;
+}
+
+.scheme-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.scheme-card {
+    background: white;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+    transition: .2s;
+}
+
+.scheme-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.1);
+}
+
+.scheme-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.scheme-icon {
+    width: 48px;
+    height: 48px;
+    background: #eef4ff;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+}
+
+.bookmark-btn {
+    border: none;
+    background: #f2f4f7;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.bookmark-btn.saved {
+    background: #fef3c7;
+}
+
+.scheme-card h3 {
+    margin: 18px 0 10px;
+    font-size: 19px;
+}
+
+.scheme-card p {
+    color: #667085;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.info-row {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.tag {
+    background: #f2f4f7;
+    padding: 6px 9px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.deadline {
+    margin-top: auto;
+    padding-top: 18px;
+    color: #475467;
+    font-size: 13px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.view-btn {
+    flex: 1;
+    padding: 11px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.loading,
+.empty-state {
+    text-align: center;
+    padding: 60px;
+    color: #667085;
+}
+
+.empty-state div {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+@media(max-width:900px) {
+
+    .scheme-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:650px) {
+
+    nav {
+        display: none;
+    }
+
+    .page-header {
+        padding: 30px;
+    }
+
+    .header-icon {
+        display: none;
+    }
+
+    .scheme-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        padding: 13px;
+    }
+}

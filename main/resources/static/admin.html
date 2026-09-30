@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ScholarFind - Admin</title>
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="brand">
+        🎓 ScholarFind Admin
+    </div>
+
+    <button onclick="adminLogout()">
+        Logout
+    </button>
+
+</header>
+
+
+
+<main class="container">
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+
+        <div>
+
+            <span>
+                ADMIN PANEL
+            </span>
+
+            <h1>
+                Scholarship Management
+            </h1>
+
+            <p>
+                Add, edit and manage government scholarship schemes.
+            </p>
+
+        </div>
+
+
+        <div>
+            ⚙️
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SCHOLARSHIP MANAGEMENT
+    ========================== -->
+
+    <section class="admin-grid">
+
+
+        <!-- =====================
+             SCHOLARSHIP FORM
+        ====================== -->
+
+        <div class="form-card">
+
+            <h2 id="formTitle">
+                Add Scholarship
+            </h2>
+
+
+            <form id="schemeForm">
+
+
+                <input
+                    type="hidden"
+                    id="schemeId"
+                >
+
+
+                <!-- Scheme Name -->
+
+                <label>
+                    Scheme Name
+                </label>
+
+                <input
+                    type="text"
+                    id="schemeName"
+                    placeholder="Enter scheme name"
+                    required
+                >
+
+
+                <!-- Benefits -->
+
+                <label>
+                    Benefits
+                </label>
+
+                <textarea
+                    id="benefits"
+                    placeholder="Enter scholarship benefits"
+                    required
+                ></textarea>
+
+
+                <!-- Eligibility -->
+
+                <label>
+                    Eligibility
+                </label>
+
+                <textarea
+                    id="eligibility"
+                    placeholder="Enter eligibility details"
+                    required
+                ></textarea>
+
+
+                <!-- Deadline -->
+
+                <label>
+                    Application Deadline
+                </label>
+
+                <input
+                    type="date"
+                    id="applicationDeadline"
+                >
+
+
+                <!-- Application Link -->
+
+                <label>
+                    Application Link
+                </label>
+
+                <input
+                    type="url"
+                    id="applicationLink"
+                    placeholder="https://example.com"
+                    required
+                >
+
+
+                <!-- Required Documents -->
+
+                <label>
+                    Required Documents
+                </label>
+
+                <textarea
+                    id="requiredDocuments"
+                    placeholder="Enter required documents"
+                    required
+                ></textarea>
+
+
+                <!-- Application Procedure -->
+
+                <label>
+                    Application Procedure
+                </label>
+
+                <textarea
+                    id="applicationProcedure"
+                    placeholder="Enter application procedure"
+                    required
+                ></textarea>
+
+
+                <!-- Income Limit -->
+
+                <label>
+                    Income Limit
+                </label>
+
+                <input
+                    type="number"
+                    id="incomeLimit"
+                    min="0"
+                    placeholder="Enter income limit"
+                    required
+                >
+
+
+                <!-- Eligible Category -->
+
+                <label>
+                    Eligible Category
+                </label>
+
+                <input
+                    type="text"
+                    id="eligibleCategory"
+                    placeholder="BC / MBC / SC / ST / ALL"
+                    required
+                >
+
+
+                <!-- Eligible Course -->
+
+                <label>
+                    Eligible Course
+                </label>
+
+                <input
+                    type="text"
+                    id="eligibleCourse"
+                    placeholder="BCA / B.Tech / MBA"
+                    required
+                >
+
+
+                <!-- Eligible Location -->
+
+                <label>
+                    Eligible Location
+                </label>
+
+                <input
+                    type="text"
+                    id="eligibleLocation"
+                    placeholder="Tamil Nadu"
+                    required
+                >
+
+
+                <!-- Buttons -->
+
+                <button
+                    type="submit">
+
+                    Save Scholarship
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="cancel"
+                    onclick="resetForm()">
+
+                    Clear
+
+                </button>
+
+
+            </form>
+
+
+            <!-- Message -->
+
+            <div id="message"></div>
+
+
+        </div>
+
+
+
+        <!-- =====================
+             SCHOLARSHIP LIST
+        ====================== -->
+
+        <div>
+
+
+            <div class="list-header">
+
+                <h2>
+                    Scholarships
+                </h2>
+
+
+                <button
+                    onclick="loadSchemes()">
+
+                    🔄 Refresh
+
+                </button>
+
+            </div>
+
+
+            <div id="schemeList">
+
+                <p class="loading">
+                    Loading scholarships...
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         STUDENT DATABASE
+    ================================================== -->
+
+    <section class="student-section">
+
+
+        <!-- Student Header -->
+
+        <div class="student-header">
+
+
+            <div>
+
+                <span class="section-label">
+                    STUDENT MANAGEMENT
+                </span>
+
+
+                <h2>
+                    Student Database
+                </h2>
+
+
+                <p>
+                    View all registered student information.
+                </p>
+
+            </div>
+
+
+
+            <!-- Student Buttons -->
+
+            <div class="student-actions">
+
+
+                <button
+                    class="refresh-btn"
+                    onclick="loadStudents()">
+
+                    🔄 Refresh Students
+
+                </button>
+
+
+                <button
+                    class="excel-btn"
+                    onclick="exportStudentsToExcel()">
+
+                    📥 Export to Excel
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             STUDENT TABLE
+        ========================== -->
+
+        <div class="student-table-container">
+
+
+            <table id="studentTable">
+
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Student ID
+                        </th>
+
+
+                        <th>
+                            Name
+                        </th>
+
+
+                        <th>
+                            Username
+                        </th>
+
+
+                        <th>
+                            Course
+                        </th>
+
+
+                        <th>
+                            Income
+                        </th>
+
+
+                        <th>
+                            Academic Details
+                        </th>
+
+
+                        <th>
+                            Category
+                        </th>
+
+
+                        <th>
+                            Location
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+
+                <tbody id="studentTableBody">
+
+                    <tr>
+
+                        <td
+                            colspan="8"
+                            class="loading">
+
+                            Loading students...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =================================================
+     XLSX LIBRARY
+================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js">
+</script>
+
+
+
+<!-- =================================================
+     ADMIN JAVASCRIPT
+================================================== -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>

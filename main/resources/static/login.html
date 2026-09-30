@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ScholarFind - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="brand-section">
+        <div class="logo">🎓</div>
+
+        <h1>ScholarFind</h1>
+
+        <p>
+            Government Scholarship Finder
+        </p>
+
+        <span>
+            Find scholarships that match your eligibility.
+        </span>
+    </div>
+
+
+    <div class="login-card">
+
+        <h2>Welcome Back</h2>
+
+        <p class="subtitle">
+            Login to continue
+        </p>
+
+
+        <div id="message"></div>
+
+
+        <form id="loginForm">
+
+            <label>Username</label>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter username"
+                required
+            >
+
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                required
+            >
+
+
+            <button type="submit" id="loginBtn">
+                Login
+            </button>
+
+        </form>
+
+
+        <div class="register-text">
+            Don't have an account?
+            <a href="#" onclick="showRegister()">
+                Register
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Register Modal -->
+
+<div id="registerModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeRegister()">
+            &times;
+        </span>
+
+        <h2>Create Student Account</h2>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                id="regName"
+                placeholder="Student Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="regUsername"
+                placeholder="Username"
+                required
+            >
+
+            <input
+                type="password"
+                id="regPassword"
+                placeholder="Password"
+                required
+            >
+
+            <input
+                type="text"
+                id="regCourse"
+                placeholder="Course / Class"
+                required
+            >
+
+            <input
+                type="number"
+                id="regIncome"
+                placeholder="Annual Family Income"
+                min="0"
+                required
+            >
+
+            <input
+                type="text"
+                id="regAcademic"
+                placeholder="Academic Details"
+                required
+            >
+
+            <select id="regCategory" required>
+                <option value="">Select Category</option>
+                <option value="General">General</option>
+                <option value="BC">BC</option>
+                <option value="MBC">MBC</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+                <option value="OBC">OBC</option>
+            </select>
+
+            <input
+                type="text"
+                id="regLocation"
+                placeholder="Location"
+                required
+            >
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+        <div id="registerMessage"></div>
+
+    </div>
+
+</div>
+
+
+<script src="login.js"></script>
+
+</body>
+</html>
